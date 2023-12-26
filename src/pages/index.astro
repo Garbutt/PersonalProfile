@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import { Image } from "astro:assets";
+import profilePicture from "../../public/profile pic.png";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -23,10 +25,10 @@ import Navbar from "../components/Navbar.astro";
         </p>
 
         <div class="profile-image">
-          <img
+          <Image
+            src={profilePicture}
             class="profile-image"
-            src="../../public/profile pic.png"
-            alt="Reece Farrell"
+            alt="Reece Farrell Picture"
           />
         </div>
       </div>

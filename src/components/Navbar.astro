@@ -1,13 +1,14 @@
 ---
-
+import { Image } from "astro:assets";
+import icon from "../../public/person icon.png";
 ---
 
 <header>
   <main>
     <div class="logo">
-      <a href="../../src/pages/index.astro"
-        ><img class="logo" src="../../public/person icon.png" alt="icon" /></a
-      >
+      <a href="../../src/pages/index.astro">
+        <Image src={icon} alt="Reece Farrell logo" class="logo" />
+      </a>
     </div>
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
