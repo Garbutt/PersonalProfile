@@ -293,6 +293,10 @@ import Footer from "../components/Footer.astro";
       font-size: 120px;
     }
 
+    h2 {
+      font-size: 50px;
+    }
+
     .color-gradient {
       font-size: 140px;
     }
@@ -320,6 +324,7 @@ import Footer from "../components/Footer.astro";
     }
 
     .about-text {
+      font-size: 35px;
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 3;
@@ -357,6 +362,94 @@ import Footer from "../components/Footer.astro";
 
     .language-header {
       padding-top: 15%;
+    }
+
+    .language-text {
+      margin-top: 50px;
+    }
+  }
+
+  /*Screens bigger than 1000px */
+  @media only screen and (min-width: 1000px) {
+    .about {
+      display: grid;
+      grid-template-rows: repeat(7, 70px);
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      grid-column-start: 8;
+      grid-column-end: 10;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+
+    .language {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  /*Screens bigger than 1300px */
+  @media only screen and (min-width: 1300px) {
+    .text-intro {
+      font-size: 150px;
+    }
+
+    .color-gradient {
+      font-size: 175px;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 35px;
+    }
+
+    .about-text {
+      grid-column-start: 2;
+      grid-column-end: 8;
+      grid-row-start: 3;
+      grid-row-end: 6;
+    }
+
+    .languages {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-top: 5%;
+      height: 100px;
+    }
+
+    .language-container {
+      flex: 0 0 15%;
+      margin: 20px;
+    }
+
+    /*Screens bigger than 1700px */
+    @media only screen and (min-width: 1700px) {
+      .text-intro {
+        font-size: 180px;
+      }
+
+      .color-gradient {
+        font-size: 205px;
+      }
+
+      h2 {
+        font-size: 70px;
+      }
+
+      .profile-image {
+        width: 300px;
+        height: 300px;
+        grid-column-start: 8;
+        grid-column-end: 10;
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
     }
   }
 </style>
