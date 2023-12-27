@@ -5,33 +5,34 @@ import icon from "../../public/person icon.png";
 
 <header>
   <main>
-    <div class="logo">
-      <a href="../../src/pages/index.astro">
-        <Image src={icon} alt="Reece Farrell logo" class="logo" />
-      </a>
-    </div>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="../../src/pages/index.astro">
+          <Image src={icon} alt="Reece Farrell logo" class="logo" />
+        </a>
+      </div>
 
-    <!--Overlay -->
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
-        >&times;</a
-      >
+      <!--Overlay -->
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+          >&times;</a
+        >
 
-      <div class="overlay-content">
-        <a href="">Home</a>
-        <a href="">Projects</a>
-        <a href="">Blog</a>
-        <a href="">Contact</a>
+        <div class="overlay-content">
+          <a href="">Home</a>
+          <a href="">Projects</a>
+          <a href="">Blog</a>
+          <a href="">Contact</a>
+        </div>
       </div>
     </div>
-
     <span id="nav" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
     <script type="module">
       const nav = document.getElementById("myNav");
 
       /*open nav*/
       function openNav() {
-        nav.style.height = "100vh";
+        nav.style.height = "100%";
         body.style.overflow = "hidden";
       }
 
@@ -49,8 +50,8 @@ import icon from "../../public/person icon.png";
 </header>
 
 <style>
-  body {
-    overflow: hidden;
+  .wrapper {
+    height: 100%;
   }
 
   main {
