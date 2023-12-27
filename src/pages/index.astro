@@ -3,6 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import { Image } from "astro:assets";
 import profilePicture from "../../public/profile pic.png";
+import htmlLogo from "../../public/html.png";
+import cssLogo from "../../public/css-3.png";
+import jsLogo from "../../public/js.png";
+import java from "../../public/java.png";
+import csLogo from "../../public/c-sharp.png";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -44,6 +49,26 @@ import profilePicture from "../../public/profile pic.png";
 
       <div class="languages">
         <h2>&lt;Languages I Use/&gt;</h2>
+        <div class="language">
+          <Image class="language" src={htmlLogo} alt="HTML logo" />
+        </div>
+        <div class="language-text">HTML 5</div>
+        <div class="language">
+          <Image class="language" src={cssLogo} alt="CSS logo" />
+        </div>
+        <div class="language-text">CSS</div>
+        <div class="language">
+          <Image class="language" src={jsLogo} alt="JavaScript logo" />
+        </div>
+        <div class="language-text">JavaScript</div>
+        <div class="language">
+          <Image class="language" src={java} alt="Java logo" />
+        </div>
+        <div class="language-text">JAVA</div>
+        <div class="language">
+          <Image class="language" src={csLogo} alt="C-Sharp logo" />
+        </div>
+        <div class="language-text">C#</div>
       </div>
     </div>
   </body>
@@ -103,7 +128,8 @@ import profilePicture from "../../public/profile pic.png";
     margin-top: 5%;
     color: var(--orange);
     font-size: 30px;
-    height: 1000px;
+    height: 100%;
+    margin-bottom: 5%;
   }
 
   .about-text {
@@ -137,5 +163,21 @@ import profilePicture from "../../public/profile pic.png";
     border-radius: 50%;
     outline: solid 6px #f58939;
     margin-bottom: 20%;
+  }
+
+  /*Languages*/
+  .language {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+
+  .language-text {
+    text-align: center;
+    color: #fff;
   }
 </style>
