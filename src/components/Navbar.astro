@@ -31,7 +31,7 @@ import icon from "../../public/person icon.png";
 
       /*open nav*/
       function openNav() {
-        nav.style.height = "100vh";
+        nav.style.height = "800px";
       }
 
       /*close nav*/
@@ -64,7 +64,8 @@ import icon from "../../public/person icon.png";
   }
 
   .close-btn {
-    font-size: 50px;
+    display: flex;
+    font-size: 60px;
     text-decoration: none;
     color: rgb(245, 137, 57);
     color: linear-gradient(
@@ -73,9 +74,9 @@ import icon from "../../public/person icon.png";
       rgba(226, 155, 51, 1) 48%,
       rgba(255, 212, 0, 1) 100%
     );
-    top: 350px;
-    right: 45px;
     position: absolute;
+    right: 45px;
+    top: 380px;
   }
 
   .fa-solid {
@@ -93,12 +94,13 @@ import icon from "../../public/person icon.png";
 
   /*Overlay*/
   .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: end;
     height: 0%;
     width: 100%;
     position: absolute;
     z-index: 1;
-    left: 0;
-    right: 0;
     background-color: #fff;
     overflow-x: hidden;
     transition: 0.5s;
@@ -114,7 +116,7 @@ import icon from "../../public/person icon.png";
   .overlay-content {
     width: 100%;
     text-align: center;
-    margin-top: 110%;
+    margin-bottom: 15%;
   }
 
   .overlay-content a {
@@ -122,8 +124,9 @@ import icon from "../../public/person icon.png";
     text-decoration: none;
     font-size: 36px;
     color: #fff;
-    display: block;
+    display: flex;
     transition: 1s;
+    justify-content: center;
   }
 
   .overlay-content a:hover a:focus {
