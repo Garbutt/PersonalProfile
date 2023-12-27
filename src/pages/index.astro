@@ -20,7 +20,16 @@ import csLogo from "../../public/c-sharp.png";
         HI, I AM <br /><span class="color-gradient">Reece</span><br
           class="gap"
         />
-      </h1><p class="sub-text">A junior Software Developer</p>
+      </h1>
+      <div class="wrapper">
+        <p class="sub-text">
+          <ul class="dynamic-text">
+            <li class="dynamic-list">
+              <span> A Junior Software Developer</span>
+            </li>
+          </ul>
+        </p>
+      </div>
     </div>
   </main>
 
@@ -105,6 +114,47 @@ import csLogo from "../../public/c-sharp.png";
     text-align: center;
     margin-top: 2%;
     font-size: 21px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dynamic-text .wrapper {
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+  }
+
+  .dynamic-text .dynamic-list {
+    list-style: none;
+    font-size: 21px;
+  }
+
+  .dynamic-text li span {
+    position: relative;
+  }
+
+  .dynamic-text li span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid orange;
+    left: 0;
+    animation: typing 5s steps(27) infinite;
+    background: #090e25;
+  }
+
+  @keyframes typing {
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
   }
 
   .text-intro {
