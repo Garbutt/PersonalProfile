@@ -22,6 +22,7 @@ import Footer from "../components/Footer.astro";
           class="gap"
         />
       </h1>
+      <!--Moving Text -->
       <div class="wrapper">
         <p class="sub-text">
           <ul class="dynamic-text">
@@ -56,34 +57,49 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
       <!--Languages I use -->
-
+      <h2 class="language-header">&lt;Languages I Use/&gt;</h2>
       <div class="languages">
-        <h2>&lt;Languages I Use/&gt;</h2>
-        <div class="language">
-          <Image class="language" src={htmlLogo} alt="HTML logo" />
+        <!---HTML -->
+        <div class="language-container">
+          <div class="language">
+            <Image class="language" src={htmlLogo} alt="HTML logo" />
+          </div>
+          <div class="language-text">HTML 5</div>
         </div>
-        <div class="language-text">HTML 5</div>
-        <div class="language">
-          <Image class="language" src={cssLogo} alt="CSS logo" />
+        <!---CSS -->
+        <div class="language-container">
+          <div class="language">
+            <Image class="language" src={cssLogo} alt="CSS logo" />
+          </div>
+          <div class="language-text">CSS</div>
         </div>
-        <div class="language-text">CSS</div>
-        <div class="language">
-          <Image class="language" src={jsLogo} alt="JavaScript logo" />
+        <!---JS -->
+        <div class="language-container">
+          <div class="language">
+            <Image class="language" src={jsLogo} alt="JavaScript logo" />
+          </div>
+          <div class="language-text">JavaScript</div>
         </div>
-        <div class="language-text">JavaScript</div>
-        <div class="language">
-          <Image class="language" src={java} alt="Java logo" />
+        <!---JAVA -->
+        <div class="language-container">
+          <div class="language">
+            <Image class="language" src={java} alt="JavaScript logo" />
+          </div>
+          <div class="language-text">JAVA</div>
         </div>
-        <div class="language-text">JAVA</div>
-        <div class="language">
-          <Image class="language" src={csLogo} alt="C-Sharp logo" />
+        <!---C# -->
+        <div class="language-container">
+          <div class="language">
+            <Image class="language" src={csLogo} alt="C-Sharp logo" />
+          </div>
+          <div class="language-text">C#</div>
         </div>
-        <div class="language-text">C#</div>
       </div>
     </div>
   </body>
 </Layout>
 <style>
+  /*Phone Screen*/
   html {
     background: rgb(24, 33, 64);
     background: linear-gradient(
@@ -117,6 +133,7 @@ import Footer from "../components/Footer.astro";
     font-size: 21px;
   }
 
+  /*Moving Text*/
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -160,6 +177,7 @@ import Footer from "../components/Footer.astro";
     }
   }
 
+  /*Header Text*/
   .text-intro {
     font-size: 80px;
     line-height: 1em;
@@ -209,7 +227,7 @@ import Footer from "../components/Footer.astro";
 
   .profile-image {
     height: 210px;
-    width: 205px;
+    width: 210px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -232,5 +250,113 @@ import Footer from "../components/Footer.astro";
   .language-text {
     text-align: center;
     color: #fff;
+  }
+
+  /*Screens bigger than 500px */
+  @media only screen and (min-width: 500px) {
+    .text-intro {
+      font-size: 100px;
+    }
+
+    .color-gradient {
+      font-size: 120px;
+    }
+
+    .container {
+      margin-top: 25%;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 25px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .about-text {
+      font-size: 25px;
+      margin-left: 2.8em;
+      margin-right: 2em;
+    }
+
+    .profile-image {
+      height: 230px;
+      width: 230px;
+      margin-bottom: 25%;
+    }
+  }
+
+  /*Screens bigger than 800px */
+  @media only screen and (min-width: 800px) {
+    .text-intro {
+      font-size: 120px;
+    }
+
+    .color-gradient {
+      font-size: 140px;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 28px;
+    }
+
+    .container {
+      display: grid;
+      padding-top: 15%;
+    }
+
+    .about {
+      display: grid;
+      grid-template-rows: repeat(9, 70px);
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .about-header {
+      grid-column-start: 5;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .about-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 3;
+      grid-row-end: 6;
+    }
+
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      grid-column-start: 8;
+      grid-column-end: 10;
+      grid-row-start: 4;
+      grid-row-end: 6;
+    }
+
+    .languages {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 5%;
+      height: 450px;
+    }
+
+    .language-container {
+      flex: 0 0 25%;
+      margin: 20px;
+    }
+
+    .language {
+      width: 120px;
+      height: 120px;
+    }
+
+    .language-header {
+      padding-top: 15%;
+    }
   }
 </style>
