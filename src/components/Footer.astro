@@ -6,9 +6,16 @@ import { Image } from "astro:assets";
   <div class="container">
     <p>Get In Touch</p>
     <div class="links">
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-linkedin"></i>
-      <i class="fa-brands fa-github"></i>
+      <a href="https://www.instagram.com/reece_garbutt_/"
+        ><i class="fa-brands fa-instagram"></i></a
+      >
+
+      <a href="https://ie.linkedin.com/in/reece-farrell-834654252"
+        ><i class="fa-brands fa-linkedin"></i></a
+      >
+      <a href="https://github.com/Garbutt"
+        ><i class="fa-brands fa-github"></i></a
+      >
     </div>
   </div>
 </footer>
@@ -19,7 +26,7 @@ import { Image } from "astro:assets";
     width: 100%;
     display: flex;
     padding-bottom: 10%;
-    margin-top: 20%;
+    margin-top: 30%;
   }
 
   p {
@@ -41,6 +48,16 @@ import { Image } from "astro:assets";
     justify-content: space-around;
     font-size: 60px;
     align-items: center;
+    color: rgb(245, 137, 57);
+    color: linear-gradient(
+      65deg,
+      rgba(245, 137, 57, 1) 0%,
+      rgba(226, 155, 51, 1) 48%,
+      rgba(255, 212, 0, 1) 100%
+    );
+  }
+
+  .links a {
     color: rgb(245, 137, 57);
     color: linear-gradient(
       65deg,
