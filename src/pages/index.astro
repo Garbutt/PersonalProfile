@@ -23,8 +23,8 @@ import profilePicture from "../../public/profile pic.png";
     <!--Container-->
     <div class="container">
       <!--About Me -->
-      <div class="about-header">
-        <h2>&lt;About Me/&gt;</h2>
+      <div class="about">
+        <h2 class="about-header">&lt;About Me/&gt;</h2>
         <p class="about-text">
           Hello there! 👋 I'm Reece, a junior software developer passionate
           about crafting elegant solutions to real-world problems. <br /><br
@@ -102,14 +102,14 @@ import profilePicture from "../../public/profile pic.png";
   }
   .about-header {
     text-align: center;
-    color: var(--orange);
+    font-size: 50px;
   }
 
   .about-text {
+    margin-left: 2em;
+    margin-right: 1.6em;
     color: #fff;
-    text-align: center;
-    margin-left: 1.8em;
-    margin-right: 1.8em;
+    float: left;
     margin-top: 1em;
     font-size: 20px;
     margin-bottom: 10%;
@@ -132,6 +132,6 @@ import profilePicture from "../../public/profile pic.png";
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    outline: solid 5px orange;
+    outline: solid 6px #f58939;
   }
 </style>
