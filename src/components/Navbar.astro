@@ -31,13 +31,15 @@ import icon from "../../public/person icon.png";
 
       /*open nav*/
       function openNav() {
-        nav.style.height = "800px";
+        nav.style.height = "100vh";
+        body.style.overflow = "hidden";
       }
 
       /*close nav*/
       function closeNav(event) {
         event.preventDefault();
         nav.style.height = "0%";
+        body.style.overflow = "";
       }
 
       document.getElementById("nav").addEventListener("click", openNav);
@@ -47,14 +49,17 @@ import icon from "../../public/person icon.png";
 </header>
 
 <style>
+  body {
+    overflow: hidden;
+  }
+
   main {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    height: 50px;
-    background-color: none;
     align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    background-color: none;
   }
 
   .logo {
@@ -64,9 +69,6 @@ import icon from "../../public/person icon.png";
   }
 
   .close-btn {
-    display: flex;
-    font-size: 60px;
-    text-decoration: none;
     color: rgb(245, 137, 57);
     color: linear-gradient(
       65deg,
@@ -75,8 +77,9 @@ import icon from "../../public/person icon.png";
       rgba(255, 212, 0, 1) 100%
     );
     position: absolute;
-    right: 45px;
-    top: 380px;
+    top: 15px;
+    right: 50px;
+    font-size: 60px;
   }
 
   .fa-solid {
@@ -94,42 +97,39 @@ import icon from "../../public/person icon.png";
 
   /*Overlay*/
   .overlay {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 0%;
-    width: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
-    background-color: #fff;
-    overflow-x: hidden;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
     transition: 0.5s;
-    background: rgb(24, 33, 64);
     background: linear-gradient(
       65deg,
-      rgba(24, 33, 64, 1) 0%,
-      rgba(12, 28, 43, 1) 48%,
-      rgba(6, 3, 33, 1) 100%
+      rgba(24, 33, 64, 1),
+      rgba(12, 28, 43, 1),
+      rgba(6, 3, 33, 1)
     );
   }
 
   .overlay-content {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 
   .overlay-content a {
-    padding: 8px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 40px;
     color: #fff;
-    display: flex;
-    transition: 1s;
-    justify-content: center;
+    transition: 0.3s;
   }
 
-  .overlay-content a:hover a:focus {
-    color: #000;
+  .overlay-content a:hover {
+    color: orange;
   }
 </style>
