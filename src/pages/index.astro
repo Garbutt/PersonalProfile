@@ -46,10 +46,10 @@ import Footer from "../components/Footer.astro";
           and I've been on an exciting learning adventure ever since.
         </p>
         <!--Profile image -->
-        <div class="profile">
+        <div class="profile-image">
           <Image
             src={profilePicture}
-            class="profile-image"
+            class="profile"
             alt="Reece Farrell Picture"
           />
         </div>
@@ -201,7 +201,7 @@ import Footer from "../components/Footer.astro";
     font-size: 35px;
   }
 
-  .profile-image {
+  .profile {
     height: 210px;
     width: 210px;
     display: flex;
@@ -209,6 +209,15 @@ import Footer from "../components/Footer.astro";
     margin-right: auto;
     border-radius: 50%;
     border: solid 6px #f58939;
+    margin-bottom: 20%;
+  }
+
+  .profile-image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+
     margin-bottom: 20%;
   }
 
@@ -308,14 +317,15 @@ import Footer from "../components/Footer.astro";
     }
 
     .profile-image {
-      width: 250px;
-      height: 250px;
       grid-column-start: 8;
       grid-column-end: 10;
       grid-row-start: 5;
       grid-row-end: 7;
     }
-
+    .profile {
+      width: 250px;
+      height: 250px;
+    }
     .languages {
       width: 100%;
       display: flex;
@@ -354,12 +364,15 @@ import Footer from "../components/Footer.astro";
     }
 
     .profile-image {
-      width: 300px;
-      height: 300px;
       grid-column-start: 8;
       grid-column-end: 10;
       grid-row-start: 4;
       grid-row-end: 6;
+    }
+
+    .profile {
+      width: 300px;
+      height: 300px;
     }
 
     .language {
