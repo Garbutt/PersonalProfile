@@ -7,7 +7,7 @@ import csharpImage from "../../public/c-sharpProjects.png";
 ---
 
 <Layout title="My Projects">
-  <main>
+  <main class="main-projects">
     <!--My Projects Text -->
     <div class="projects-intro">
       <h1>MY <span class="color-gradient">PROJECTS</span></h1>
@@ -74,7 +74,7 @@ import csharpImage from "../../public/c-sharpProjects.png";
 </Layout>
 
 <style>
-  main {
+  .main-projects {
     height: 100%;
   }
 
@@ -125,16 +125,12 @@ import csharpImage from "../../public/c-sharpProjects.png";
     margin-top: 10%;
   }
 
-  article:hover .image {
-    width: 240px;
-  }
-
   article:hover {
     opacity: 70%;
   }
 
   .image {
-    width: 200px;
+    width: 220px;
     height: auto;
     border-radius: 5%;
     border: solid 2px #fff;
@@ -143,5 +139,86 @@ import csharpImage from "../../public/c-sharpProjects.png";
 
   .name {
     margin-top: 5%;
+  }
+
+  /*Screens bigger than 400px */
+  @media only screen and (min-width: 400px) {
+    .image {
+      width: 230px;
+    }
+    article {
+      width: 280px;
+    }
+  }
+
+  /*Screens bigger than 800px */
+  @media only screen and (min-width: 800px) {
+    .flex-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    article {
+      width: 300px;
+      height: 280px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    .image {
+      width: 240px;
+    }
+
+    h1 {
+      font-size: 90px;
+    }
+  }
+
+  /*Screens bigger than 900px */
+  @media only screen and (min-width: 900px) {
+    article {
+      width: 400px;
+      height: 300px;
+    }
+
+    .image {
+      width: 300px;
+    }
+  }
+
+  /*Screens bigger than 1200px */
+  @media only screen and (min-width: 1200px) {
+    article {
+      width: 450px;
+      height: 340px;
+    }
+
+    .image {
+      width: 320px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+
+  /*Screens bigger than 1400px */
+  @media only screen and (min-width: 1400px) {
+    article {
+      width: 520px;
+      height: 380px;
+    }
+
+    .image {
+      width: 360px;
+    }
   }
 </style>

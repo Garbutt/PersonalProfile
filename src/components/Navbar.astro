@@ -5,10 +5,10 @@ import Index from "../pages/index.astro";
 ---
 
 <header>
-  <main>
+  <main class="main-nav">
     <div class="wrapper">
       <div class="logo">
-        <a href="../../src/pages/index.astro">
+        <a href="/index.html">
           <Image src={icon} alt="Reece Farrell logo" class="logo" />
         </a>
       </div>
@@ -51,17 +51,13 @@ import Index from "../pages/index.astro";
 </header>
 
 <style>
-  .wrapper {
-    height: 100%;
-  }
-
-  main {
+  .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
     padding: 0 15px;
     background-color: none;
+    height: 80px;
   }
 
   .logo {

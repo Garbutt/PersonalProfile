@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 ---
 
 <footer>
-  <div class="container">
+  <div class="container-footer">
     <p>Social Links</p>
     <div class="links">
       <a href="https://www.instagram.com/reece_garbutt_/"
@@ -26,7 +26,7 @@ import { Image } from "astro:assets";
     width: 100%;
     display: flex;
     padding-bottom: 10%;
-    margin-top: 30%;
+    margin-top: 25%;
   }
 
   p {
@@ -35,7 +35,7 @@ import { Image } from "astro:assets";
     text-align: center;
     margin-bottom: 5%;
   }
-  .container {
+  .container-footer {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -65,5 +65,19 @@ import { Image } from "astro:assets";
       rgba(226, 155, 51, 1) 48%,
       rgba(255, 212, 0, 1) 100%
     );
+  }
+
+  /*Screens bigger than 800px */
+  @media only screen and (min-width: 800px) {
+    footer {
+      margin-top: 45%;
+    }
+  }
+
+  /*Screens bigger than 1500px */
+  @media only screen and (min-width: 1500px) {
+    footer {
+      margin-top: 25%;
+    }
   }
 </style>
