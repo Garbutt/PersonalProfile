@@ -1,9 +1,11 @@
 ---
 import ProjectsPage from "../../components/ProjectsPage.astro";
 import { Image } from "astro:assets";
-import HFC from "../../../public/hfc.png";
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar.astro";
 ---
 
+<Navbar />
 <ProjectsPage
   name="Web Projects"
   type="web"
@@ -11,4 +13,6 @@ import HFC from "../../../public/hfc.png";
   language="Astro"
   src="/../../HardwickeFC .mp4"
   poster="../../hfc.png"
+  link="https://github.com/Garbutt/Hardwicke-FC"
 />
+<Footer />
