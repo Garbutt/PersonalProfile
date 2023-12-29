@@ -17,9 +17,9 @@ import csharpImage from "../../public/c-sharpProjects.png";
       <div class="flex-container">
         <!--Web Projects -->
 
-        <a href="../webProjects/webLandingPage.html">
-          <article>
-            <!--Image -->
+        <article>
+          <!--Image -->
+          <a href="../webProjects/webLandingPage.html">
             <div class="image-container">
               <Image
                 alt="Web Development Projects"
@@ -33,43 +33,47 @@ import csharpImage from "../../public/c-sharpProjects.png";
             </div>
             <!--SubText -->
             <div class="subtext"><p>HTML, CSS, JS</p></div>
-          </article>
-        </a>
+          </a>
+        </article>
 
         <!--JAVA -->
         <article>
           <!--Image -->
-          <div class="image-container">
-            <Image
-              alt="Web Development Projects"
-              class="image"
-              src={javaImage}
-            />
-          </div>
-          <!--Heading -->
-          <div class="name">
-            <h3>JAVA PROJECTS</h3>
-          </div>
-          <!--SubText -->
-          <div class="subtext"><p>OBJECT ORIENTED PROGRAMMING</p></div>
+          <a href="../webProjects/webLandingPage.html">
+            <div class="image-container">
+              <Image
+                alt="Web Development Projects"
+                class="image"
+                src={javaImage}
+              />
+            </div>
+            <!--Heading -->
+            <div class="name">
+              <h3>JAVA PROJECTS</h3>
+            </div>
+            <!--SubText -->
+            <div class="subtext"><p>OBJECT ORIENTED PROGRAMMING</p></div>
+          </a>
         </article>
 
         <!--C Sharp -->
         <article>
           <!--Image -->
-          <div class="image-container">
-            <Image
-              alt="Web Development Projects"
-              class="image"
-              src={csharpImage}
-            />
-          </div>
-          <!--Heading -->
-          <div class="name">
-            <h3>C-SHARP PROJECTS</h3>
-          </div>
-          <!--SubText -->
-          <div class="subtext"><p>.NET</p></div>
+          <a href="../csharpProjects/csharpLandingPage.html">
+            <div class="image-container">
+              <Image
+                alt="Web Development Projects"
+                class="image"
+                src={csharpImage}
+              />
+            </div>
+            <!--Heading -->
+            <div class="name">
+              <h3>C-SHARP PROJECTS</h3>
+            </div>
+            <!--SubText -->
+            <div class="subtext"><p>.NET</p></div>
+          </a>
         </article>
       </div>
     </div>
@@ -142,6 +146,11 @@ import csharpImage from "../../public/c-sharpProjects.png";
 
   .name {
     margin-top: 5%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
   }
 
   /*Screens bigger than 400px */

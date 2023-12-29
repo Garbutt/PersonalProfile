@@ -27,7 +27,9 @@ import Layout from "../layouts/Layout.astro";
       <!--Project Name -->
       <h3>{projectName}</h3>
       <!--Languages Used -->
-      <p>Language used: <span class="type-color-change">{language}</span></p>
+      <p class="built-with-text">
+        Built with: <span class="type-color-change">{language}</span>
+      </p>
       <!---Video -->
       <video width="200px" height="auto" controls poster={poster}>
         <source src={src} type="video/mp4" /></video
@@ -53,6 +55,10 @@ import Layout from "../layouts/Layout.astro";
   p {
     color: #fff;
     text-align: center;
+  }
+
+  .built-with-text {
+    margin-top: 5%;
   }
 
   .type-color-change {
