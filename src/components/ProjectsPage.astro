@@ -5,9 +5,10 @@ interface Props {
   projectName: string;
   language: string;
   src: string;
+  poster: string;
 }
 
-const { name, type, projectName, language, src }: Props = Astro.props;
+const { name, type, projectName, language, src, poster }: Props = Astro.props;
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -27,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
       <!--Languages Used -->
       <p>Language used: <span class="type-color-change">{language}</span></p>
       <!---Video -->
-      <video width="200px" height="auto" controls>
+      <video width="200px" height="auto" controls poster={poster}>
         <source src={src} type="video/mp4" /></video
       >
     </article>
