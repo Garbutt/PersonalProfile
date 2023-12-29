@@ -1,0 +1,57 @@
+---
+interface Props {
+  name: string;
+  type: string;
+  projectName: string;
+  language: string;
+  src: string;
+}
+
+const { name, type, projectName, language, src }: Props = Astro.props;
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Web Projects">
+  <body
+    ><!---Projects Type -->
+    <h1>{name}</h1>
+    <!--Projects intro -->
+    <p>
+      Here are my recent <span class="type-color-change">{type}</span>
+       projects
+    </p>
+    <!--Article -->
+    <article>
+      <!--Project Name -->
+      <h3>{projectName}</h3>
+      <!--Languages Used -->
+      <p>Language used: <span class="type-color-change">{language}</span></p>
+      <!---Video -->
+      <video width="200px" height="auto" src={src}></video>
+    </article>
+  </body>
+</Layout>
+<style>
+  h1 {
+    text-align: center;
+    color: #f58939;
+    margin-top: 20%;
+    font-size: 45px;
+  }
+
+  h3 {
+    text-align: center;
+    color: #f58939;
+    margin-top: 10%;
+    font-size: 20px;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+  }
+
+  .type-color-change {
+    color: #f58939;
+  }
+</style>
