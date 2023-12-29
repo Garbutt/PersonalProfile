@@ -4,8 +4,11 @@ import { Image } from "astro:assets";
 import webImage from "../../public/webDev.png";
 import javaImage from "../../public/javaProjects.png";
 import csharpImage from "../../public/c-sharpProjects.png";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
+<Navbar />
 <Layout title="My Projects">
   <main class="main-projects">
     <!--My Projects Text -->
@@ -79,7 +82,7 @@ import csharpImage from "../../public/c-sharpProjects.png";
     </div>
   </main>
 </Layout>
-
+<Footer />
 <style>
   .main-projects {
     height: 100%;
