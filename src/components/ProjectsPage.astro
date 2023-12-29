@@ -27,7 +27,9 @@ import Layout from "../layouts/Layout.astro";
       <!--Languages Used -->
       <p>Language used: <span class="type-color-change">{language}</span></p>
       <!---Video -->
-      <video width="200px" height="auto" src={src}></video>
+      <video width="200px" height="auto" controls>
+        <source src={src} type="video/mp4" /></video
+      >
     </article>
   </body>
 </Layout>
@@ -53,5 +55,13 @@ import Layout from "../layouts/Layout.astro";
 
   .type-color-change {
     color: #f58939;
+  }
+
+  video {
+    display: flex;
+    border: solid 5px #f58939;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
   }
 </style>
