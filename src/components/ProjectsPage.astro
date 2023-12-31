@@ -7,10 +7,21 @@ interface Props {
   src: string;
   poster: string;
   link: string;
+  description1: string;
+  description2: string;
 }
 import Layout from "../layouts/Layout.astro";
-const { name, type, projectName, language, src, poster, link }: Props =
-  Astro.props;
+const {
+  name,
+  type,
+  projectName,
+  language,
+  src,
+  poster,
+  link,
+  description1,
+  description2,
+}: Props = Astro.props;
 ---
 
 <Layout title="A" />
@@ -35,6 +46,7 @@ const { name, type, projectName, language, src, poster, link }: Props =
     <video width="300px" height="auto" controls poster={poster}>
       <source src={src} type="video/mp4" /></video
     >
+    <p class="description">{description1}<br /><br />{description2}</p>
     <!--Buttons -->
     <div class="button-container">
       <a href={link}
@@ -84,6 +96,11 @@ const { name, type, projectName, language, src, poster, link }: Props =
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+  }
+
+  .description {
+    text-align: left;
+    margin: 3em;
   }
 
   .button-container {
