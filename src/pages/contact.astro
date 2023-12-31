@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Navbar />
+<Layout title="Contact Me" />
+<h1>GET IN <span>TOUCH</span></h1>
+<div class="contact-container">
+  <div class="flexbox-contact-container">
+    <input class="email" id="email" type="email" placeholder="E-Mail Address" />
+    <input
+      class="message"
+      type="text"
+      id="message"
+      placeholder="What can I help you with?"
+    />
+
+    <button>Send</button>
+  </div>
+</div>
+<Footer />
+
+<style>
+  h1 {
+    color: #fff;
+    font-size: 45px;
+  }
+
+  span {
+    color: #f58939;
+  }
+
+  .contact-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flexbox-contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 250px;
+
+    color: #000;
+    border-radius: 5px;
+  }
+
+  .email {
+    margin-top: 10%;
+    height: 40px;
+  }
+
+  .message {
+    margin-top: 5%;
+    height: 200px;
+  }
+
+  button {
+    width: 120px;
+    height: 50px;
+    background-color: #f58939;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-size: 18px;
+  }
+</style>
