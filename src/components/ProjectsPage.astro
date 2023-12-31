@@ -2,6 +2,8 @@
 interface Props {
   name: string;
   type: string;
+  recentProjects1: string;
+  recentProjects2: string;
   projectName: string;
   language: string;
   src: string;
@@ -25,27 +27,30 @@ const {
   description2,
   visit,
   visitLink,
+  recentProjects1,
+  recentProjects2,
 }: Props = Astro.props;
 ---
 
-<Layout title="A" />
+<Layout title="My Projects" />
 
 <body
   ><!---Projects Type -->
   <h1>{name}</h1>
   <!--Projects intro -->
   <p>
-    Here are my recent <span class="type-color-change">{type}</span>
-     projects
+    {recentProjects1}
+    <span class="type-color-change">{type}</span>
+    {recentProjects2}
+  </p>
+  <!--Project Name -->
+  <h3>{projectName}</h3>
+  <!--Languages Used -->
+  <p class="built-with-text">
+    Built with: <span class="type-color-change">{language}</span>
   </p>
   <!--Article -->
   <article>
-    <!--Project Name -->
-    <h3>{projectName}</h3>
-    <!--Languages Used -->
-    <p class="built-with-text">
-      Built with: <span class="type-color-change">{language}</span>
-    </p>
     <!---Video -->
     <video width="300px" height="auto" controls poster={poster}>
       <source src={src} type="video/mp4" /></video
@@ -55,21 +60,20 @@ const {
         >{visit}</a
       >
     </p>
-    <!--Buttons -->
-    <div class="button-container">
-      <a href={link}
-        ><button class="btn-code"
-          ><i class="fa-brands fa-github"></i>Code</button
-        ></a
-      >
-      <a href="/projects.html"
-        ><button class="btn-return"
-          ><i class="fa-solid fa-arrow-left"></i>Back</button
-        ></a
-      >
-    </div>
   </article>
 </body>
+<!--Buttons -->
+<div class="button-container">
+  <a href={link}
+    ><button class="btn-code"><i class="fa-brands fa-github"></i>Code</button
+    ></a
+  >
+  <a href="/projects.html"
+    ><button class="btn-return"
+      ><i class="fa-solid fa-arrow-left"></i>Back</button
+    ></a
+  >
+</div>
 <style>
   h1 {
     text-align: center;
@@ -88,6 +92,7 @@ const {
   p {
     color: #fff;
     text-align: center;
+    font-size: 18px;
   }
 
   .built-with-text {
@@ -132,18 +137,17 @@ const {
     border-radius: 10%;
     cursor: pointer;
     font-size: 20px;
+    width: 120px;
+    height: 60px;
   }
 
   .btn-code {
-    width: 120px;
-    height: 60px;
     background-color: #fff;
     color: #f58939;
     border: solid 3px #f58939;
   }
+
   .btn-return {
-    width: 120px;
-    height: 60px;
     background-color: #f58939;
     color: #fff;
     border: solid 3px #fff;
@@ -207,8 +211,151 @@ const {
 
   /*Screens bigger than 500px */
   @media only screen and (min-width: 500px) {
-    h1{
-      font
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 20px;
+    }
+
+    video {
+      width: 400px;
+    }
+  }
+
+  /*Screens bigger than 700px */
+  @media only screen and (min-width: 700px) {
+    h1 {
+      font-size: 70px;
+    }
+    video {
+      width: 500px;
+    }
+
+    button {
+      width: 140px;
+      height: 70px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-top: 10%;
+      font-size: 40px;
+    }
+
+    .built-with-text {
+      margin-bottom: 2%;
+    }
+  }
+
+  /*Screens bigger than 1200px */
+  @media only screen and (min-width: 1200px) {
+    h1 {
+      font-size: 85px;
+      margin-top: 10%;
+    }
+
+    p {
+      font-size: 20px;
+    }
+    article {
+      display: flex;
+      flex-direction: row;
+    }
+    video {
+      width: 500px;
+      height: 280px;
+      margin-left: 3em;
+    }
+
+    .button-container {
+      justify-content: left;
+      margin-left: 7.7em;
+      margin-top: 0%;
+    }
+
+    .btn-return {
+      margin-left: 3em;
+    }
+  }
+
+  /*Screens bigger than 1300px */
+  @media only screen and (min-width: 1300px) {
+    .button-container {
+      margin-top: 2%;
+    }
+    .description {
+      padding-top: 3%;
+    }
+  }
+
+  /*Screens bigger than 1500px */
+  @media only screen and (min-width: 1500px) {
+    .description {
+      margin-right: 7em;
+      padding-top: 0%;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    .button-container {
+      margin-left: 11em;
+    }
+
+    video {
+      width: 600px;
+      height: 340px;
+    }
+  }
+
+  /*Screens bigger than 1600px */
+  @media only screen and (min-width: 1600px) {
+    .description {
+      margin-right: 8em;
+      padding-top: 2%;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  /*Screens bigger than 1800px */
+  @media only screen and (min-width: 1800px) {
+    .description {
+      margin-right: 15em;
+      padding-top: 2%;
+    }
+  }
+
+  /*Screens bigger than 2000px */
+  @media only screen and (min-width: 2000px) {
+    .description {
+      margin-right: 20em;
+      padding-top: 3%;
+    }
+
+    video {
+      width: 800px;
+      height: auto;
+    }
+  }
+
+  /*Screens bigger than 2400px */
+  @media only screen and (min-width: 2400px) {
+    h1 {
+      font-size: 100px;
+    }
+    h3 {
+      font-size: 60px;
+    }
+
+    .description {
+      margin-right: 10em;
+      padding-top: 3%;
+      font-size: 30px;
     }
   }
 </style>
