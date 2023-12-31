@@ -9,6 +9,8 @@ interface Props {
   link: string;
   description1: string;
   description2: string;
+  visit: string;
+  visitLink: string;
 }
 import Layout from "../layouts/Layout.astro";
 const {
@@ -21,6 +23,8 @@ const {
   link,
   description1,
   description2,
+  visit,
+  visitLink,
 }: Props = Astro.props;
 ---
 
@@ -46,7 +50,11 @@ const {
     <video width="300px" height="auto" controls poster={poster}>
       <source src={src} type="video/mp4" /></video
     >
-    <p class="description">{description1}<br /><br />{description2}</p>
+    <p class="description">
+      {description1}<br /><br />{description2}<br /><br /><a href={visitLink}
+        >{visit}</a
+      >
+    </p>
     <!--Buttons -->
     <div class="button-container">
       <a href={link}
@@ -101,6 +109,14 @@ const {
   .description {
     text-align: left;
     margin: 3em;
+  }
+
+  a {
+    color: #f58939;
+  }
+
+  a::after {
+    color: #f58939;
   }
 
   .button-container {
@@ -187,6 +203,13 @@ const {
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  /*Screens bigger than 500px */
+  @media only screen and (min-width: 500px) {
+    h1{
+      font
+    }
   }
 </style>
 <script src="https://kit.fontawesome.com/75375d0f3e.js" crossorigin="anonymous"
