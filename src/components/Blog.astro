@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import { Image } from "astro:assets";
+import astroLogo from "../../public/astro.png";
+---
+
+<body>
+  <div class="blog-wrapper">
+    <div class="blog-container">
+      <Image class="icon" src={astroLogo} alt="Astro Blog" />
+      <h4>Building a blog with astro</h4>
+    </div>
+    <div class="blog-container">
+      <Image class="icon" src={astroLogo} alt="Astro Blog" />
+      <a href="https://reece-f-image-search.netlify.app/"
+        >Image Search Engine Test</a
+      >
+    </div>
+  </div>
+</body>
+
+<style>
+  .blog-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 80%;
+    color: #fff;
+  }
+
+  .blog-container {
+    display: flex;
+    width: 100%;
+    border: solid 3px #f58939;
+    height: 50px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 5%;
+    border-radius: 10px;
+  }
+
+  h4 {
+    text-decoration: underline;
+  }
+
+  .blog-container:hover {
+    color: #f58939;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+</style>
