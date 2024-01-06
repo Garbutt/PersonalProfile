@@ -3,9 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import BlogLayout from "../components/Blog.astro";
+import BlogHeader from "../components/BlogHeader.astro";
 ---
 
 <Navbar />
+
 <Layout title="Blog" />
-<BlogLayout title="Testing" />
+<BlogHeader title="MY " titleColorChange="BLOG" />
+<BlogLayout
+  title="Creating an image search engine"
+  src="../js.png"
+  alt="Creating a search engine "
+/>
+
+<Layout title="Blog" />
+<BlogLayout
+  title="Creating a blog with Astro"
+  src="../astro.png"
+  alt="Creating a search engine "
+/>
 <Footer />
+
+<style></style>

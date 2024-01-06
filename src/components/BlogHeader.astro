@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  titleColorChange: string;
+}
+
+const { title, titleColorChange } = Astro.props;
+---
+
+<h1>{title}<span>{titleColorChange}</span></h1>
+
+<style>
+  h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+  span {
+    color: #f58939;
+  }
+</style>
